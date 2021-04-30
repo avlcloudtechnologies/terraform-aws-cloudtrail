@@ -14,7 +14,7 @@ Below is a complete example without the S3 bucket creation part. More examples c
 
 ```hcl
 module "cloudtrail" {
-  source = "./modules/cloudtrail"
+  source  = "avlcloudtechnologies/cloudtrail/aws"
 
   name                              = "${var.name}-${var.environment}"
   s3_bucket_name                    = module.cloudtrail_bucket.this_s3_bucket_id
